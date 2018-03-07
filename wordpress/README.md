@@ -1,2 +1,0 @@
-# wordpress
-A wordpress plugin

@@ -100,4 +100,9 @@ class Metype_Plugin_Public {
 
 	}
 
+
+	public function admin_action_action() {
+
+    }
+
 }

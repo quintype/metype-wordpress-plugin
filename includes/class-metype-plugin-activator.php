@@ -30,7 +30,7 @@ class Metype_Plugin_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-	    echo '<h1>Bwhahahaha</h1>';
+
 	}
 
 }

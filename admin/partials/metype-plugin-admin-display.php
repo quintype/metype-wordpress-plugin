@@ -16,3 +16,4 @@
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
 <h1>Metype Admin</h1>
+<b>Bow bow</b>
