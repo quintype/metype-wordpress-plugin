@@ -4,6 +4,10 @@ This plugin is still **under development**
 ### Pre-requisites for Developer setup
 * Docker Community Edition for mac **version 17.03.0 or higher**
 
+### Installing docker
+* In terminal run the following command `brew install docker` to install docker using brew. Otherwise you can install docker from https://www.docker.com/community-edition
+* Run `docker -v` to check the version of docker.
+
 ### Initial Developer setup
 1. Clone the repo
 2. cd metype-wordpress-plugin
