@@ -40,6 +40,11 @@ function my_plugin_comment_template( $comment_template ) {
 	return dirname(__FILE__) . '/h1.php';
 }
 
+function add_metype_script() {
+    echo '<script type=\'text/javascript\'>window.talktype = window.talktype || function(f) {(talktype.q = talktype.q || []).push(arguments);};</script><script src=\'https://staging.metype.com/quintype-metype/assets/application.js\'></script>';
+}
+
+add_action('wp_head', 'add_metype_script');
 add_action( 'admin_menu', 'metype_contruct_admin_menu' );
 add_filter( "comments_template", "my_plugin_comment_template" );
 ?>
