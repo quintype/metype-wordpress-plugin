@@ -2,7 +2,7 @@
 This plugin is still **under development**
 
 ### Pre-requisites for Developer setup
-* Docker Community Edition for mac ** version 17.03.0 or higher**
+* Docker Community Edition for mac **version 17.03.0 or higher**
 
 ### Initial Developer setup
 1. Clone the repo
