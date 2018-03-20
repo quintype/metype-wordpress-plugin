@@ -25,11 +25,14 @@ function metype_construct_admin_menu() {
         'dashicons-admin-comments',
         24
     );
-    add_action( 'admin_init', 'update_extra_post_info' );
+    add_action( 'admin_init', 'update_emetype_settings_info' );
 }
 
-function update_extra_post_info() {
+function update_emetype_settings_info() {
     register_setting( 'metype-settings', 'metype-account-id' );
+    register_setting( 'metype-settings', 'metype-primary-color' );
+    register_setting( 'metype-settings', 'metype-bg-color' );
+    register_setting( 'metype-settings', 'metype-font-color' );
 }
 
 function metype_construct_admin_bar( $wp_admin_bar ) {
@@ -60,9 +63,12 @@ wp_enqueue_script( 'feed_widget_js', plugin_dir_url( __FILE__ ) . 'scripts/feed_
 //Add feedwidget css to page
 wp_enqueue_style( 'feed_widget_css', plugin_dir_url( __FILE__ ) . 'styles/feed_widget.css' );
 
-
+//Send configuration variables to populate in feed widget
 wp_localize_script( 'feed_widget_js', 'php_vars', array(
-    'metypeAccountId' => get_option('metype-account-id')
+    'metypeAccountId' => get_option('metype-account-id'),
+    'metypePrimaryColor' => get_option('metype-primary-color'),
+    'metypeBgColor' => get_option('metype-bg-color'),
+    'metypeFontColor' => get_option('metype-font-color')
 ));
 
 ?>
