@@ -58,7 +58,7 @@ function add_metype_feed_widget() {
     wp_enqueue_script( 'feed_widget_js', plugin_dir_url( __FILE__ ) . 'scripts/feed_widget.js' );
 
     //Add feedwidget css to page
-    wp_enqueue_style( 'feed_widget_css', plugin_dir_url( __FILE__ ) . 'styles/feed_widget.css' );
+    wp_enqueue_style( 'feed_widget_css', plugin_dir_url( __FILE__ ) . 'styles/feed-widget.css' );
 
     //Send configuration variables to populate in feed widget
     wp_localize_script( 'feed_widget_js', 'php_vars', array(
@@ -77,6 +77,9 @@ add_action( 'admin_menu', 'metype_construct_admin_menu' );
 
 //Insert custom comment template
 add_filter( "comments_template", "my_plugin_comment_template" );
+
+//Insert metype admin CSS
+wp_enqueue_style( 'feed_widget_css', plugin_dir_url( __FILE__ ) . 'styles/metype-admin.css' );
 
 if(get_option('metype-feed-widget-active') == 1) {
     add_metype_feed_widget();
