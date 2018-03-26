@@ -2,7 +2,7 @@
 /*
 Plugin Name: Metype Plugin
 Description: Metype wordpress plugin to enable metype commenting widget and feed widget on your site
-Version: 1.0.0
+Version: 0.0.1
 Author: Metype Dev Team
 */
 function metype_moderate_comments_render() {
