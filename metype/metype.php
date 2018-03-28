@@ -67,7 +67,7 @@ function add_metype_script() {
 }
 // Metype comment widget template
 function add_metype_comment_template($comment_template) {
-  return dirname(__FILE__) . '/metype-widget-template.php';
+  return dirname(__FILE__) . '/metype-comment-widget-template.php';
 }
 
 function add_metype_feed_widget() {
