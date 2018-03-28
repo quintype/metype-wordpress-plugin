@@ -3,9 +3,7 @@
 * Plugin Name:  Metype for WordPress
 * Plugin URI: https://www.metype.com
 * Description:  Metype helps publishers build user communities where users can get live updates about comments, reactions and have conversations in realtime.
-Version: 0.0.1
-* Author:            Metype
-* Author URI:        https://www.metype.com
+* Version: 0.0.1
 * License:           GPL-2.0+
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
 */
@@ -27,6 +25,11 @@ function update_metype_settings_info() {
   register_setting( 'metype-settings', 'metype-feed-widget-active' );
 }
 
+// Removes the current to
+function remove_comments_menu( $wp_admin_bar ) {
+  $wp_admin_bar->remove_node('comments');
+}
+
 function metype_admin_menu() {
   if(!current_user_can('moderate_comments')) {
     return;
@@ -46,6 +49,9 @@ function metype_admin_menu() {
     24
   );
   add_action('admin_init', 'update_metype_settings_info');
+  add_action( 'admin_bar_menu', 'remove_comments_menu', 999 );
+
+  add_action('admin_bar_menu', $plugin_admin, 'dsq_construct_admin_bar', 999);
 }
 
 // Construct admin menu
