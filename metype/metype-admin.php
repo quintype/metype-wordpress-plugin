@@ -1,13 +1,11 @@
-<?php
-?>
-
 <div class="metype-admin-wrapper">
   <div class="metype-admin-container">
     <h1>Metype plugin settings</h1>
     <form method="post" action="options.php">
-        <?php settings_fields( 'metype-settings' ); ?>
+      <?php settings_fields( 'metype-settings' ); ?>
       <div class="metype-admin-container__input">
-        Metype account id: <input type="text" name="metype-account-id" value="<?php echo get_option('metype-account-id'); ?>"/>
+        Metype account id:
+        <input type="text" name="metype-account-id" value="<?php echo get_option('metype-account-id'); ?>"/>
       </div>
       <div class="metype-admin-container__input">
         Primary Color:
