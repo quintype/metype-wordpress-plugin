@@ -50,8 +50,6 @@ function metype_admin_menu() {
   );
   add_action('admin_init', 'update_metype_settings_info');
   add_action( 'admin_bar_menu', 'remove_comments_menu', 999 );
-
-  add_action('admin_bar_menu', $plugin_admin, 'dsq_construct_admin_bar', 999);
 }
 
 // Construct admin menu
