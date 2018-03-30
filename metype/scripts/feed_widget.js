@@ -15,7 +15,7 @@
     elemDiv.setAttribute('data-metype-primary-color', php_vars.metypePrimaryColor );
     elemDiv.setAttribute('data-metype-secondary-color', php_vars.metypeBgColor );
     elemDiv.setAttribute('data-metype-font-color', php_vars.metypeFontColor );
-    elemDiv.setAttribute('data-metype-host', 'https://staging.metype.com/');
+    elemDiv.setAttribute('data-metype-host', 'https://staging.metype.com');
 
     var clickThruDiv = document.createElement('div');
     clickThruDiv.setAttribute('id', 'metype-clickthru');

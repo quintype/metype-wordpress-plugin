@@ -14,7 +14,9 @@ function render_metype_admin() {
 }
 
 //Insert metype admin CSS
-wp_enqueue_style('metype_admin_css', plugin_dir_url( __FILE__ ) . 'styles/metype-admin.css' );
+function metype_admin_css( $hook ) {
+  wp_enqueue_style('metype_admin_css', plugin_dir_url( __FILE__ ) . 'styles/metype-admin.css' );
+}
 
 //Register metype configurations to database
 function update_metype_settings_info() {
@@ -49,27 +51,19 @@ function metype_admin_menu() {
     24
   );
   add_action('admin_init', 'update_metype_settings_info');
-  add_action( 'admin_bar_menu', 'remove_comments_menu', 999 );
+  add_action('admin_bar_menu', 'remove_comments_menu', 999 );
 }
 
 // Construct admin menu
 add_action('admin_menu', 'metype_admin_menu');
 
+add_action('admin_enqueue_scripts', 'metype_admin_css' );
+
 // Admin related changes end
 
 // Widget related changes start
 
-// Metype script
-function add_metype_script() {
-  echo '<script type=\'text/javascript\'>
-          window.talktype = window.talktype || function(f) {
-            (talktype.q = talktype.q || []).push(arguments);
-          };
-        </script>
-        <script src=\'https://staging.metype.com/quintype-metype/assets/application.js\'>
-        </script>';
-}
-// Metype comment widget template
+// Add Metype comment widget template
 function add_metype_comment_template($comment_template) {
   return dirname(__FILE__) . '/metype-comment-widget-template.php';
 }
@@ -90,15 +84,19 @@ function add_metype_feed_widget() {
   ));
 }
 
-if(get_option('metype-feed-widget-active') == 1) {
-  add_metype_feed_widget();
-}
 
 //Insert metype comment template
 add_filter('comments_template', 'add_metype_comment_template');
 
-//Add metype application.js to the head of the page
-add_action('wp_head', 'add_metype_script');
+function load_metype() {
+  wp_enqueue_script('metype-application', plugin_dir_url( __FILE__ ) . 'scripts/metype_application.js');
+  wp_enqueue_script('metype-loader', plugin_dir_url( __FILE__ ) . 'scripts/metype_loader.js');
+  if(get_option('metype-feed-widget-active') == 1) {
+    add_metype_feed_widget();
+  }
+}
+
+add_action('wp_enqueue_scripts', 'load_metype');
 
 // Widget related changes end
 
