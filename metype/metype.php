@@ -3,7 +3,7 @@
 * Plugin Name:  Metype for WordPress
 * Plugin URI: https://www.metype.com
 * Description:  Metype helps publishers build user communities where users can get live updates about comments, reactions and have conversations in realtime.
-* Version: 0.0.1
+* Version: 1.0.0
 * License:           GPL-2.0+
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
 */
