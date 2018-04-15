@@ -1,5 +1,5 @@
 === Metype ===
-Contributors: yelkarthik, jeevan030418, metypedev
+Contributors: jeevan030418, metypedev, yelkarthik
 Tags: comments, spam, engagement, conversations, freedom of speech, communities
 Requires at least: 3.0.1
 Tested up to: 4.9.4
