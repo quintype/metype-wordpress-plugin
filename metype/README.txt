@@ -2,8 +2,7 @@
 Contributors: jeevan030418, metypedev, yelkarthik
 Tags: comments, spam, engagement, conversations, freedom of speech, communities
 Requires at least: 3.0.1
-Tested up to: 4.9.4
-Stable tag: 4.3
+Tested up to: 5.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +12,7 @@ Metype - A complete engagement solution for your Wordpress site. It keeps your a
 
 * Live feed widget re-circulates content among your audience.
 * Social login using Facebook, Google and Twitter.
-* Comments Manager to delete or restore comments is packaged with an in-built auto spam detection powered by Akismet so spammers are kept at bay. 
+* Comments Manager to delete or restore comments is packaged with an in-built auto spam detection powered by Akismet so spammers are kept at bay.
 * Moderate comments based on keywords in all languages and scripts;
 * Configurable colours so that the widgets blend in with the theme of your website.
 * Ban users so comments made by them are auto deleted.
@@ -29,10 +28,18 @@ Check our [privacy policy](https://legal.metype.com/privacy-policy) and [terms &
 
 == Installation ==
 
-1. Go to **"Plugins"** > **"Add Plugin"**
-2. Search for **"Metype Engagement Engine"** by Metype
-3. Click **"Install Now"**
-4. Activate the plugin
-5. Go to [Metype](https://www.metype.com). Click on **"Get started"** > **"Sign up"** 
-6. Once you reach admin panel. Click on Embed metype. Under Metype for wordpress. Copy the account-id.
-7. Go to wordpress dashboard. Click on metype on sidebar menu. Enter the account-id in the empty box and click save. Metype is live on your site.
+1. Visit [Metype](https://www.metype.com)
+2. Click on Get Started for a free plan, or choose a plan that suits your need.
+3. Enter the required details and proceed to create an account.
+4. You will be redirected to metype.com/admin. Under the Embed Metype section you'll find Account ID.
+5. Make a note of your Metype Account ID.
+6. Now visit your Wordpress admin page. E.g. yourwebsite.com/wp-admin
+7. Go to Plugins —> Add new
+8. Search for Metype
+9. You'll find Metype by Quintype Technologies India Pvt Ltd
+10. Click on Install Now.
+11. Click on Activate.
+12. You will now be able to see Metype on the left hand side of the Wordpress admin page.
+13. Enter your Metype Account ID, review your settings and Save Changes
+Note: The Metype Account ID is the one you had noted down in Step 5; available in metype.com/admin —> Embed Metype.
+14. The Metype commenting widget will now begin to appear in all of your Wordpress pages.
